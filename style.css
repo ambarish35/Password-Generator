@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Handjet', cursive;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    background-color: #D77A61;
+}
+
+.app {
+    width: 450px;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 50px 10px #E54B4B;
+}
+
+.app h1 {
+    margin: 30px 0px;
+    padding: 0px 0px;
+    font-size: 36px;
+    letter-spacing: 3px;
+}
+
+.display-container {
+    margin: 0px 0px 20px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    justify-content: space-evenly;
+    background-color: #050609;
+    border-radius: 12px;
+    position: relative;
+}
+
+
+.password-display {
+    font-family: 'Handjet', cursive;
+    font-size: xx-large;
+    color: #6CF9F2FF;
+    background-color: #050609;
+    margin: 5px 10px 5px 0px;
+    height: 80%;
+    width: 80%;
+    border: none;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 1.5rem;
+}
+
+.password-display:focus {
+    outline: none;
+}
+
+.password-display::placeholder {
+    color: #6CF9F2FF;
+    opacity: 0.75;
+}
+
+#copy-btn {
+    position: absolute;
+    top: 55%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#span {
+    position: absolute;
+    background-color: #6CF9F2FF;
+    font-size: 1rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+
+#span.active {
+    opacity: 1;
+    transform-origin: bottom;
+    transform: scale(1);
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: #EFCEFA;
+    height: 63%;
+    justify-content: flex-start;
+    border-radius: 20px;
+    padding: 0px 20px;
+}
+
+.length-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #E54B4B;
+}
+
+.strength-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: black;
+}
+
+#indicator{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    /* background-color: #050609; */
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    gap: 0 1rem;
+}
+
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #E54B4B;
+    border-radius: 0.3rem;
+}
+
+.check input:checked{
+    background-color: #D77A61;
+}
+
+.check input:checked::before{
+    content: '✓';
+    position: absolute;
+    font-weight: 900;
+    color: black;
+    bottom: 1px;
+    left: 4px;
+    font-size: 1.5em;
+    transform: translateY(18%) translateX(-12%);
+}
+
+.check label{
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.generateButton{
+    padding: 10px 0px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px 3px #f5b0b0;
+    color: #E54B4B;
+    font-size: 1.05em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.slider {
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    height: 0.75rem;
+    border-radius: 10px;
+    background-color: #D77A61;
+    background-image: linear-gradient(black,black);
+    background-repeat: no-repeat;
+    margin: 10px 0px 20px;
+}
+
+.slider::-webkit-slider-thumb{
+
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(20, 201, 192);
+    box-shadow: 0px 0px 10px 2px rgb(20, 201, 192);
+    transition: all 100ms ease-in;
+}
+
+.slider::-webkit-slider-thumb:hover{
+    outline: 1px solid #E54B4B;
+    background-color: black;
+    box-shadow: 0px 0px 10px 7px #E54B4B ;
+}
+
+.slider:focus{
+    border: 1.5px solid #E54B4B;
+}
